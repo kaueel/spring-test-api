@@ -1,4 +1,4 @@
-package bookmarks;
+package com.example;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -92,7 +92,7 @@ public class BookmarkRestControllerTest {
 
     @Test
     public void readSingleBookmark() throws Exception {
-        mockMvc.perform(get("/" + userName + "/bookmarks/"
+        mockMvc.perform(get("/" + userName + "/com/example/"
                 + this.bookmarkList.get(0).getId()))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
@@ -103,7 +103,7 @@ public class BookmarkRestControllerTest {
 
     @Test
     public void readBookmarks() throws Exception {
-        mockMvc.perform(get("/" + userName + "/bookmarks"))
+        mockMvc.perform(get("/" + userName + "/com/example"))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(contentType))
                 .andExpect(jsonPath("$", hasSize(2)))
@@ -120,7 +120,7 @@ public class BookmarkRestControllerTest {
         String bookmarkJson = json(new Bookmark(
                 this.account, "http://spring.io", "a bookmark to the best resource for Spring news and information"));
 
-        this.mockMvc.perform(post("/" + userName + "/bookmarks")
+        this.mockMvc.perform(post("/" + userName + "/com/example")
                 .contentType(contentType)
                 .content(bookmarkJson))
                 .andExpect(status().isCreated());
