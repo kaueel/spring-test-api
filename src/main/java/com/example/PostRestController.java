@@ -10,7 +10,7 @@ import java.util.Collection;
 
 @CrossOrigin
 @RestController
-@RequestMapping("/comments")
+@RequestMapping("/posts")
 public class PostRestController {
 
     private final PostRepository postRepository;

@@ -28,7 +28,7 @@ public class Application {
                                     "http://bookmark.com/1/" + a, "A description"));
                             bookmarkRepository.save(new Bookmark(account,
                                     "http://bookmark.com/2/" + a, "A description"));
-                            postRepository.save(new Post("Titulo legal", "Contrary to popular belief, " +
+                            postRepository.save(new Post("Titulo legal", "https://facebook.github.io/react/img/logo_og.png", "Contrary to popular belief, " +
                                     "Lorem Ipsum is not simply random text. It has roots in a piece of classical " +
                                     "Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, " +
                                     "a Latin professor at Hampden-Sydney College in Virginia.", account));

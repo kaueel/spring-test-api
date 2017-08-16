@@ -13,6 +13,8 @@ public class Post {
 
     private String title;
 
+    private String image;
+
     private String text;
 
     @ManyToOne
@@ -26,12 +28,15 @@ public class Post {
         return title;
     }
 
+    public String getImage() { return image; }
+
     public String getText() {
         return text;
     }
 
-    Post(String title, String text, Account account) {
+    Post(String title, String image, String text, Account account) {
         this.title = title;
+        this.image = image;
         this.text = text;
         this.author = account;
     }
